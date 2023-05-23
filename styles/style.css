@@ -1,0 +1,30 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 50px;
+}
+ul > li > a {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 45px;
+  color: black;
+}
+ul > li > a:hover {
+  color: brown;
+  transition: 0.3s;
+}
+
+.table {
+  width: 800px;
+  height: 600px;
+  background: rgb(170, 169, 169);
+  margin: 0 auto;
+  font-size: 25px;
+  padding: 25px;
+}/*# sourceMappingURL=style.css.map */
