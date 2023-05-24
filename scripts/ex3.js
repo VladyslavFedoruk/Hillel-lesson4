@@ -58,6 +58,41 @@ let users = [{
     }
 ]
 
-// var str = 'Twas the pisa night before pisa...';
-// var newstr = str.replace(/pisa/i, 'Christmas');
-// console.log(newstr);
+let phones1 = [];
+let generalAmount1 = 0;
+
+//Вариант-1
+for (let i = 0; i < users.length; i++) {
+    let user = users[i].phone;
+    // console.log(user);
+    let amount = users[i].balance;
+    // console.log(amount);
+    let deleteSymbol = amount.replace(/[$,]/g, '');
+    // console.log(deleteSymbol);
+    let swap = parseFloat(deleteSymbol);
+    // console.log(deleteSymbol);
+    generalAmount1 += swap;
+}
+console.log("Вариант-1:" + generalAmount1.toFixed(2));
+
+//Вариант-2
+let phones2 = [];
+let generalAmount2 = 0;
+for (let i = 0; i < users.length; i++) {
+    phones2.push(users[i].phone);
+    if (parseFloat(users[i].balance.replace(/[$,]/g, '')) >= 2000)
+        generalAmount2 += parseFloat(users[i].balance.replace(/[$,]/g, ''));
+
+}
+console.log("Вариант-2:" + generalAmount2.toFixed(2));
+
+//Вариант-3
+let phones3 = [];
+let generalAmount3 = 0;
+users.forEach(el => {
+    phones3.push(el.phone);
+    if (parseFloat(el.balance.replace(/[$,]/g, '')) >= 2000)
+        generalAmount3 += parseFloat(el.balance.replace(/[$,]/g, ''));
+})
+console.log("Вариант-3:" + generalAmount3.toFixed(2));
+// console.log(phones3.join(", "));
